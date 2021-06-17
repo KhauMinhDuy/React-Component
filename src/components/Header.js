@@ -1,5 +1,6 @@
 
 const Header = (props) => {
+  const {theme} = props;
   return (
     <div className="padT4 padB4">
       <div className="container mobile-container">
@@ -8,11 +9,11 @@ const Header = (props) => {
             <img src="/images/SVCCLogo.png" alt="Logo" />
           </div>
           <div className="light">
-            <h4 className="header-title">
+            <h4 className={theme === 'light' ? 'header-title' : 'text-info'}>
               Silicon Valley Code Camp
             </h4>
           </div>
-          <div className="text-dark">
+          <div className={theme === 'light' ? '' : 'text-info'}>
             Hello Duy Khau &nbsp;&nbsp;
             <span>
               <a href="#">Sign-out</a>

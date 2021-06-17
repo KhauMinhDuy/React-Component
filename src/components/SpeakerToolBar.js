@@ -1,12 +1,6 @@
-import { useState } from "react";
 
-
-
-const SpeakerToolBar = () => {
-
-  const [showSessions, setShowSessions] = useState(true);
-  const [theme, setTheme] = useState('light');
-
+const SpeakerToolBar = (props) => {
+  const {theme, setTheme, showSessions, setShowSessions} = props;
 
   const sessionsHandler = event => {
     setShowSessions(event.target.checked);
