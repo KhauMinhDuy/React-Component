@@ -18,7 +18,9 @@ const SpeakerToolBar = (props) => {
             <li className="d-flex flex-column flex-md-row">
               <b>Show Sessions &nbsp;&nbsp;</b>
               <label className="fav">
-                <input type="checkbox" checked={showSessions}
+                <input 
+                  type="checkbox" 
+                  checked={showSessions}
                   onChange={sessionsHandler}
                 />
                 <span className="switch"></span>
