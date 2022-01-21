@@ -1,17 +1,16 @@
-import Header from './Header'
-import { useState } from 'react'
-import Speakers from './Speakers';
+import Header from "./Header";
+import Speakers from "./Speakers";
+import Layout from "./Layout";
 
-const App = (props) => {
-
-  const [theme, setTheme] = useState('light');
-
+const App = () => {
   return (
-    <div className={theme === 'light' ? 'container-fluid light' : 'container-fluid dark'}>
-      <Header theme={theme}/>
-      <Speakers theme={theme} setTheme={setTheme} />
-    </div>
-  )
-}
+    <Layout startTheme="light">
+      <div>
+        <Header />
+        <Speakers />
+      </div>
+    </Layout>
+  );
+};
 
 export default App;
